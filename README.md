@@ -14,10 +14,9 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Node.js(Express)](https://nodejs.org/en/)
+- [Node.js (Express)](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
 - [MongoDB](hhttps://www.mongodb.com/)
-
 
 ## 📝 Projeto
 
