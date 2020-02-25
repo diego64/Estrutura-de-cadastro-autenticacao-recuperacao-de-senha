@@ -1,0 +1,49 @@
+/* Global */
+
+* {
+    /* Correção do comportamento padrão */
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    /* Fonte */
+    font-family: 'Roboto', 'Varela Round';
+
+    background-color: #F9F9F9;    
+}
+
+h1, h2 {
+    color: #000000CC;
+}
+
+/* Largura e altura */
+header {
+    text-align: center;
+} 
+
+body h1{
+    /* Espaçamento com margin */
+    margin: 0 auto 70px auto;
+
+    /* Limites dos  elementos na página */
+    width: 90%;
+    max-width: 500px;
+} 
+
+body p {
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+h4, h5 {
+    font-size: 14px;
+    
+}
