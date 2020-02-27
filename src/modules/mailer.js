@@ -10,24 +10,21 @@ const transport = nodemailer.createTransport({
     auth: { user, pass },
   });
 
-  transport.use('compile', hbs({
+  /*transport.use('compile', hbs({
     viewEngine:'handlebars',
     viewPath: path.resolve('./src/resources/mail/'),
     extName: '.html',
-  })); 
+  })); */
 
-  /*transport.use(
-    'compile',
-    hbs({
-      viewEngine: exphbs.create({
-        layoutsDir: path.resolve('./src/resources/mail/auth/'),
-        partialsDir: path.resolve('./src/resources/mail/auth/'),
-        defaultLayout: '',
-        extname: '.html',
-      }),
-      viewPath: path.resolve('./src/resources/mail/auth/'),
+  transport.use('compile', hbs({
+    viewEngine: {
       extName: '.html',
-    })
-  ); */
+      partialsDir: path.resolve('./src/resources/mail/'),
+      layoutsDir: path.resolve('./src/resources/mail/'),
+      defaultLayout: 'auth/forgot_password.html',
+  },
+  viewPath: path.resolve('./src/resources/mail/'),
+  extName: '.html'
+}));
 
   module.exports = transport;
