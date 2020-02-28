@@ -24,9 +24,8 @@ Esta API tem como objetivo cadastrar usuários ultilizando e-mail e senha. O sis
 
 ## 🔖 Desenvolvimento
 
-O projeto foi divido em 4 partes: 
+O projeto foi divido em 3 partes: 
 
 - Estrutura e cadastro
 - Autenticação
 - Recuperação de senha ultilizando NodeMailer
-- CRUD e relacionamentos com MongoDB
