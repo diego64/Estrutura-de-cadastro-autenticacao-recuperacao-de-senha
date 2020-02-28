@@ -90,7 +90,8 @@ router.post('/forgot_password', async (req, res) => {
 
         mailer.sendMail({
             to: email, 
-            from: 'diego.oliveira@gmail.com',
+            subject: 'Recuperação de acesso',
+            from: 'diego.ferreira@irondev.com.br',
             template: 'auth/forgot_password',
             context: { token },
         }, (err) => {
@@ -107,7 +108,7 @@ router.post('/forgot_password', async (req, res) => {
 
 //Cadastro da nova senha
 router.post('/reset_password', async (req, res) => {
-    const { email, token, password} = req.boby;
+    const { email, token, password} = req.body;
 
     try {
         const user = await User.findOne({ email })
@@ -129,7 +130,7 @@ router.post('/reset_password', async (req, res) => {
 
         await user.save();
 
-        res.send();
+        return res.status(200).send({ status: 'Senha alterada com sucesso'});
 
     } catch (err) {
         return res.status(400).send({ error: 'Não foi possivel alterar sua senha, tente novamente mais tarde'});
