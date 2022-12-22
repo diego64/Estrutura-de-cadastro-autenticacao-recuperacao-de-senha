@@ -12,7 +12,7 @@
     "exphbs": "^1.2.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^5.9.2",
     "nodemailer": "^6.4.3",
     "nodemailer-express-handlebars": "^3.1.0",
